@@ -1,6 +1,6 @@
 # Folders
-work_dir="$HOME/Sites/"
-tools_dir="$HOME/Sites/_Tools"
+work_dir="$HOME/dev/"
+tools_dir="$HOME/dev/_Tools"
 nvm_dir="$HOME/.nvm"
 
 bin_dir="/usr/local/bin"
