@@ -48,7 +48,7 @@ function opinionated_screen() {
 	bot "Opinionated Screen"
 
 	running "Save screenshots to a folders 'Screenshots' folder in desktop"
-	defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
+	defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 	running "Save screenshots in PNG format"
 	# (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -81,7 +81,7 @@ function opinionated_finder() {
 	running "Set Home as the default location for new Finder windows"
 	# For other paths, use `PfLo` and `file:///full/path/here/`
 	defaults write com.apple.finder NewWindowTarget -string "PfLo"
-	defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Sites/"
+	defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
 	running "Set the Finder prefs for showing a few different volumes on the Desktop"
 	defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
