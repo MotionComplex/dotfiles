@@ -244,25 +244,25 @@ function opinionated_dock() {
 	# defaults write com.apple.dock wvous-bl-corner -int 5
 	# defaults write com.apple.dock wvous-bl-modifier -int 0
 
-	running "Configure hot corners:"
-	running "Set bottom-left: Put display to sleep"
-	defaults write com.apple.dock wvous-bl-corner -int 10
-	defaults write com.apple.dock wvous-bl-modifier -int 0
-	running "Set bottom-right: Show Desktop"
-	defaults write com.apple.dock wvous-br-corner -int 4
-	defaults write com.apple.dock wvous-br-modifier -int 0
-	running "Set top-left: Mission Control"
-	defaults write com.apple.dock wvous-tl-corner -int 2
-	defaults write com.apple.dock wvous-tl-modifier -int 0
-	running "Set top-right: Show application windows"
-	defaults write com.apple.dock wvous-tr-corner -int 3
-	defaults write com.apple.dock wvous-tr-modifier -int 0
+	# running "Configure hot corners:"
+	# running "Set bottom-left: Put display to sleep"
+	# defaults write com.apple.dock wvous-bl-corner -int 10
+	# defaults write com.apple.dock wvous-bl-modifier -int 0
+	# running "Set bottom-right: Show Desktop"
+	# defaults write com.apple.dock wvous-br-corner -int 4
+	# defaults write com.apple.dock wvous-br-modifier -int 0
+	# running "Set top-left: Mission Control"
+	# defaults write com.apple.dock wvous-tl-corner -int 2
+	# defaults write com.apple.dock wvous-tl-modifier -int 0
+	# running "Set top-right: Show application windows"
+	# defaults write com.apple.dock wvous-tr-corner -int 3
+	# defaults write com.apple.dock wvous-tr-modifier -int 0
 
-	running "System Preferences > Dock > Size (magnified)"
-	defaults write com.apple.dock largesize -int 63
+	# running "System Preferences > Dock > Size (magnified)"
+	# defaults write com.apple.dock largesize -int 63
 
-	running "System Preferences > Dock > Magnification"
-	defaults write com.apple.dock magnification -bool true
+	# running "System Preferences > Dock > Magnification"
+	# defaults write com.apple.dock magnification -bool true
 
 	running "System Preferences > Dock > Orientation"
 	# can be top, bottom, left, right
@@ -431,9 +431,9 @@ function opinionated_chrome() {
 	defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 	defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
-	running "Disable the all too sensitive backswipe on Magic Mouse"
-	defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-	defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
+	# running "Disable the all too sensitive backswipe on Magic Mouse"
+	# defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
+	# defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
 	running "Use the system-native print preview dialog"
 	defaults write com.google.Chrome DisablePrintPreview -bool true
@@ -462,10 +462,22 @@ function opinionated_other_apps() {
 	defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2 -boolean true
 
 
-	###############################################################################
-	bot "Spectacle.app"
-	###############################################################################
+	# ###############################################################################
+	# bot "Spectacle.app"
+	# ###############################################################################
 
-	running "Set up my preferred keyboard shortcuts"
-	cp -r configs/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+	# running "Set up my preferred keyboard shortcuts"
+	# cp -r configs/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+
+
+	# ###############################################################################
+	bot "Rectangle.app"
+	# ###############################################################################
+	running "Show import/export shortcuts"
+	defaults write com.knollsoft.Rectangle showExportImport -bool true
+
+	# @dev: Settings not applied. Check this link for more info -> https://github.com/rxhanson/Rectangle/blob/34753b6c9a75055cbc6b6e8d56bd0882760b5af7/README.md
+	# running "Set up my preferred keyboard shortcuts"
+	# mkdir ~/Library/Application\ Support/Rectangle/
+	# cp -r configs/RectangleConfig.json ~/Library/Application\ Support/Rectangle/RectangleConfig.json 2> /dev/null
 }

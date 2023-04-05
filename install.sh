@@ -361,13 +361,13 @@ ok
 
 ###############################################################################
 function general_adjustments() {
-	general_ui
-	general_energy
+	# general_ui
+	# general_energy
 	general_screen
 	general_finder
-	general_dock
+	# general_dock
 	general_safari
-	general_timemachine
+	# general_timemachine
 	general_other_apple_apps
 }
 
@@ -377,7 +377,7 @@ function opinionated_adjustments {
 	opinionated_screen
 	opinionated_finder
 	opinionated_dock
-	opinionated_safari
+	# opinionated_safari
 	opinionated_mail
 	opinionated_terminal
 	opinionated_activity_monitor
