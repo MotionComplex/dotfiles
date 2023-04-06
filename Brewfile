@@ -82,6 +82,7 @@ cask "font-roboto-mono-nerd-font"
 cask "google-chrome"
 # Web browser
 cask "google-chrome-canary"
+cask "hubstaff"
 # Menu bar calendar
 cask "itsycal"
 # QuickLook plug-in that renders source code with syntax highlighting
